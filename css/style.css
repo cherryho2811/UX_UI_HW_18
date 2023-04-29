@@ -1,0 +1,54 @@
+/*code navbar*/
+.inline-block{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logo{
+  width: 23%;
+  padding: 1%;
+  text-align: center;
+}
+
+nav{
+  width: 73%;
+  padding: 1%;
+}
+
+ul{
+  width: 50%;
+  margin-left: auto;
+  list-style-type: none;
+}
+
+/*code hero image*/
+.heroImg{
+  height: 600px;
+  padding: 25px;
+}
+
+.content{
+  width: 500px;
+  margin: 0 auto;
+}
+
+/*code footer*/
+footer{
+  background-color: #373738;
+  color: white;
+  text-align: center;
+}
+
+footer ul{
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  list-style-type: none;
+}
+
+footer ul li{
+   padding: 10px;
+   text-align: center;
+}

@@ -1,6 +1,9 @@
 /* Whole */
 h1{
   font-family: 'Brandon Grotesque';
+  font-style: normal;
+  font-size: 50px;
+  line-height: 72px;
 }
 
 li{
@@ -39,6 +42,10 @@ p{
   line-height: 35px;
   /* or 140% */
   color: #000000;}
+
+button{
+  border-width: 0;
+}
 
 .hero button{
   padding: 20px 50px;
@@ -122,17 +129,10 @@ p{
   text-align: center;
 }
 
-.hero h1{
-  font-family: 'Brandon Grotesque';
-  font-style: normal;
-  font-size: 60px;
-  line-height: 86px;
-}
-
 
 /*Footer*/
 footer{
-  background-color: pink;
+  background-color:#FF4E4E;;
   color: white;
   text-align: center;
 
@@ -208,15 +208,6 @@ footer ul li{
   list-style-type: none;
   text-align: center;
   padding-inline-start: 0px;
-}
-
-.Skills h1{
-  /* My Skills, copy from Figma */
-font-family: 'Brandon Grotesque';
-font-style: normal;
-font-size: 50px;
-line-height: 72px;
-color: #000000;
 }
 
 .Skills h3{

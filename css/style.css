@@ -3,16 +3,58 @@ h1{
   font-family: 'Brandon Grotesque';
 }
 
-h3, li{
+li{
   font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 35px;
+  padding: 10px;
+}
+
+h3{
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 40px;
+line-height: 54px;
+color: #000000;
+}
+
+h4{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+/* identical to box height, or 100% */
+  color: #000000;
 }
 
 p{
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 35px;
+  /* or 140% */
+  color: #000000;}
+
+.hero button{
+  padding: 20px 50px;
+  gap: 10px;
+  background: #FF4E4E;
+  mix-blend-mode: normal;
+  border-radius: 8px;
+  border-width: 0;
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+/* identical to box height */
+  color: #FFFFFF;
 }
 
 /*Navbar*/
@@ -32,24 +74,31 @@ p{
 }
 
 .nav-links{
-  float: right;
+  /*float: right;
   margin: 0;
-  padding: 0;
+  padding: 0;*/
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
 }
 
-.nav-links li {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-.nav-links li:first-child {
-  margin-left: 0;
-}
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
 }
 
 
@@ -83,7 +132,7 @@ p{
 
 /*Footer*/
 footer{
-  background-color: #373738;
+  background-color: pink;
   color: white;
   text-align: center;
 
@@ -93,12 +142,11 @@ footer{
   padding: 10px;
 }
 
-.footer-links{
+/*.footer-links{
   margin: 0;
   padding: 0;
-  list-style-type: none;
   text-align: right;
-}
+}*/
 
 footer ul{
   padding-top: 10px;
@@ -110,7 +158,6 @@ footer ul{
 footer ul li{
   display: inline-block;
   margin-left: 20px;
-  padding: 10px;
 }
 
 .footer-links li:first-child {
@@ -128,6 +175,7 @@ footer ul li{
 
 .copyright p {
   margin: 0;
+  color: white;
 }
 
 
@@ -253,9 +301,31 @@ color: #000000;
   align-self: flex-start;
 }
 
+.workGrid button, .viewAll button{
+  padding: 10px 20px;
+  left: 135px;
+  top: 2634px;
+
+  background: #FF4E4E;
+  mix-blend-mode: normal;
+  border-radius: 8px;
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+.viewAll{
+  text-align: center;
+}
+
+
 /* Mobile Responsive Code */
 @media only screen and (max-width: 600px) and (orientation: portrait){
-
+/*whole*/
 body{
   height: auto;
   width: 100%;
@@ -277,64 +347,171 @@ p{
   line-height: 194%;
 }
 
+h3{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 29px;
+  color: #000000;
+}
+
+h4{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+}
+
 .hero h1, .Skills h1, .myWork h1 {
   font-style: normal;
   font-size: 32px;
+  font-weight: 500;
   line-height: 38px;
 }
 
+.skillsBox li{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 194%;
+}
+
+
+/*nav*/
 .navbar{
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   padding: 0 0;
 } 
 
+.nav-links {
+  display: none;
+  /*position: absolute;
+  right: 0px;
+  height: 92vh;
+  top: 8vh;
+  background-color: #242526;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;*/
+}
+
+.nav-links li {
+  opacity: 0;
+}
+
+.hamburger-menu {
+  display: block;
+}
+
+/*hero*/
 .hero{
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  padding: 25px;
+  margin: 0 auto;
+  row-gap: 50px;
+} 
+
+.hero button{
+padding: 15px 50px;
+background: #FF4E4E;
+mix-blend-mode: normal;
+border-radius: 8px;
+border-width: 0;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+
+}
+
+/*skills*/
+.Skills{
+  margin: auto;
+  width: 99%;
+}
+
+.skillsBox {
   flex-direction: column;
   width: 100%;
   flex-wrap: wrap;
   padding: 0 0;
-
-} 
-
-.Skills{
-  margin: auto;
-  width: 99%;
-  
-  
+  /*display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px 10px;
+  padding: 10px;
+  align-items: flex-start;
+  text-align: center;*/
 }
 
-.skillsBox {
-    flex-direction: column;
-    width: 100%;
-    flex-wrap: wrap;
-    padding: 0 0;
-    /*display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 10px 10px;
-    padding: 10px;
-    align-items: flex-start;
-    text-align: center;*/
-  }
+.toolsBox {
+  flex-direction: column;
+  width: 100%;}
 
-  .toolsBox {
+/*works*/
+.workGrid{
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "item1" 
+  "item2" 
+  "item3" 
+  "item4" 
+  "item5" 
+  "item6";}
+
+.myWork button{
+  padding: 10px 25px;
+  background: #FF4E4E;
+  mix-blend-mode: normal;
+  border-radius: 8px;
+  border-width: 0;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+
+  /*footer*/
+  footer {
     flex-direction: column;
-    width: 100%;}
+    align-items: center;
+  }
   
-  .workGrid{
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "item1" 
-    "item2" 
-    "item3" 
-    "item4" 
-    "item5" 
-    "item6";
+  .footer-links {
+    margin-top: 20px;
+  }
+  
+  .footer-links ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0;
+  }
+  
+  .footer-links li {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 194%;
   }
 
-  }
+}
 
-  /* Work section try to follow hw eg closely, add row width, add template areas names to div */
+/* Work section try to follow hw eg closely, add row width, add template areas names to div */
+
 
